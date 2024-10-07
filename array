@@ -1,5 +1,5 @@
 #!/bin/bash
 numbers=(10 20 30 40 50)
-echo "first number of arrey is: ${numbers[0]}"
+echo "first number of arrey is: ${-e \e[33m numbers[0]}"
 echo "second number of arrey is: ${numbers[1]}"
 echo "third number of arrey is: ${numbers[2]}"
