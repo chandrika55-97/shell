@@ -1,8 +1,13 @@
 #!/bin/bash
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
+
 numbers=(10 20 30 40 50)
 echo -e "first number of arrey is: $R ${numbers[0]} $N"
-echo "second number of arrey is: ${numbers[1]}"
-echo "third number of arrey is: ${numbers[2]}"
+echo -e "second number of arrey is: $G ${numbers[1]} $N"
+echo -e "third number of arrey is: $Y ${numbers[2]} $N"
+
+echo -e "list of array all numbers: ${numbers[@]}"
+
