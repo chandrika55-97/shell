@@ -1,0 +1,53 @@
+# Command to create directory in Linux
+$ mkdir testing -create a folder
+# Command to change the directory in Linux
+$ cd testing
+ls	 -    List the directory (folder) system.
+cd -      pathname	Change directory (folder) in the file system.
+cd .. -   Move one level up (one folder) in the file system.
+cp	-     Copy a file to another folder.
+mv	-     Move a file to another folder.
+mkdir	  Creates a new directory (folder).
+rmdir	  Remove a directory (folder).
+clear	  Clears the CLI window.
+exit	  Closes the CLI window.
+man       command	Shows the manual for a given command.
+open      The open command lets you open a file using this  syntax: open <filename>
+touch     You can create an empty file using the touch command syntax: touch <filename>
+find      The find command can be used to find files or folders matching a particular search pattern. It searches recursively syntax:find folder1 folder2 -name filename.txt
+in        The ln command is part of the Linux file system commands We have 2 types of links: hard links and soft links
+gzip      You can compress a file using the gzip compression protocol named LZ77 using the gzip command. syntax:gzip filename
+gunzip    The gunzip command is basically equivalent to the gzip command, except the -d option is always enabled by default  syntax:gunzip filename.gz  , gunzip -c filename.gz > anotherfilename
+tar       The tar command is used to create an archive, grouping multiple files in a single file. syntax: This command creates an archive named archive.tar with the content of file1 and file2 : tar -cf archive.tar file1 file2
+alias     You can create a new command, for example I like to call it ll , that is an alias to ls -al . syntax: alias ll='ls -al'
+cat       Access the file syntax: cat file
+less      
+tail      The best use case of tail in my opinion is when called with the -f option. It opens the file at the end, and watches for file changes. Any time there is new content in the file, it is printed in the window. This is great for watching log files, for example syntax:tail -f /var/log/system.log
+wc
+grep      You can use grep to search in files, or combine it with pipes to filter the output of another command.
+sort      The sort command in Linux is used to sort lines of text files or standard input in various ways. It can sort data alphabetically, numerically, or based on specific fields.
+uniq
+diff      The diff command in Linux is used to compare the contents of two files line by line. It outputs the differences between the files, which can be useful for identifying changes, discrepancies, or for merging changes in code.syntax:diff file1.txt file2.txt
+
+echo      The echo command does one simple job: it prints to the output the argument passed to it. syntax:echo "hello"
+chmod     Every file in the Linux / macOS Operating Systems (and UNIX systems in general) has 3 permissions: Read, write, execute.
+          Number	Octal Permission Representation	Ref
+0	No permission	---
+1	Execute permission	--x
+2	Write permission	-w-
+3	Execute and write permission: 1 (execute) + 2 (write) = 3	-wx
+4	Read permission	r--
+5	Read and execute permission: 4 (read) + 1 (execute) = 5	r-x
+6	Read and write permission: 4 (read) + 2 (write) = 6	rw-
+7	All permissions: 4 (read) + 2 (write) + 1 (execute) = 7	rwx
+
+$ chmod 755 testfile
+$ls -l testfile
+-rwxr-xr-x  1 amrood   users 1024  Nov 2 00:10  testfile
+$chmod 743 testfile
+$ls -l testfile
+-rwxr---wx  1 amrood   users 1024  Nov 2 00:10  testfile
+$chmod 043 testfile
+$ls -l testfile
+----r---wx  1 amrood   users 1024  Nov 2 00:10  testfile
+

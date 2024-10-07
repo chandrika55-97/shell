@@ -1,0 +1,144 @@
+[ root@1cbf8962a3b2 ~ ]# ls  --->in this command we can see the list of files
+anaconda-ks.cfg  anaconda-post-nochroot.log  anaconda-post.log  original-ks.cfg
+
+[ root@1cbf8962a3b2 ~ ]# ls -l --->in this command we can see the list of all files
+total 20
+-rw------- 1 root root 4115 Feb 14  2024 anaconda-ks.cfg
+-rw-r--r-- 1 root root   95 Feb 14  2024 anaconda-post-nochroot.log
+-rw-r--r-- 1 root root  483 Feb 14  2024 anaconda-post.log
+-rw------- 1 root root 3850 Feb 14  2024 original-ks.cfg
+
+[ root@1cbf8962a3b2 ~ ]# ls -l -a --->in this command we can see the list of all hidden files
+total 56
+dr-xr-x--- 1 root root 4096 Feb 20  2024 .
+drwxr-xr-x 1 root root 4096 Sep 24 15:36 ..
+-rw-r--r-- 1 root root   18 Aug 10  2021 .bash_logout
+-rw-r--r-- 1 root root  141 Aug 10  2021 .bash_profile
+-rw-r--r-- 1 root root  463 Feb 20  2024 .bashrc
+-rw-r--r-- 1 root root  100 Aug 10  2021 .cshrc
+drwx------ 2 root root 4096 Feb 19  2024 .ssh
+-rw-r--r-- 1 root root  129 Aug 10  2021 .tcshrc
+-rw------- 1 root root  532 Feb 19  2024 .viminfo
+-rw------- 1 root root 4115 Feb 14  2024 anaconda-ks.cfg
+-rw-r--r-- 1 root root   95 Feb 14  2024 anaconda-post-nochroot.log
+-rw-r--r-- 1 root root  483 Feb 14  2024 anaconda-post.log
+-rw------- 1 root root 3850 Feb 14  2024 original-ks.cfg
+
+[ root@1cbf8962a3b2 ~ ]# touch file1 --->"touch" IS USED FOR THE CREATING FILE
+[ root@1cbf8962a3b2 ~ ]# touch file2 file3 --->HERE ONE MORE ADVANTAGE WE CAN CREATE MULTIPLE FILES AT A SINGLR TIME AS WELL
+
+[ root@1cbf8962a3b2 ~ ]# ls -l
+total 20
+-rw------- 1 root root 4115 Feb 14  2024 anaconda-ks.cfg
+-rw-r--r-- 1 root root   95 Feb 14  2024 anaconda-post-nochroot.log
+-rw-r--r-- 1 root root  483 Feb 14  2024 anaconda-post.log
+-rw-r--r-- 1 root root    0 Sep 24 15:53 file1
+-rw-r--r-- 1 root root    0 Sep 24 15:53 file2
+-rw-r--r-- 1 root root    0 Sep 24 15:53 file3
+-rw------- 1 root root 3850 Feb 14  2024 original-ks.cfg
+
+[ root@54c16209d5b0 ~ ]# mkdir demo --->"mkdir" IS USED FOR THE CREATING FOLDER/DIRECTORY
+[ root@54c16209d5b0 ~ ]# mkdir Demo ---> AND ALSO HERE WE CAN SEE THE DIFFERENCE OF DIRECTORY NAMES--LINUX IS A "CASE SENSITIVE"
+[ root@54c16209d5b0 ~ ]# ls -la
+total 64
+dr-xr-x--- 1 root root 4096 Sep 24 16:19 .
+drwxr-xr-x 1 root root 4096 Sep 24 16:17 ..
+-rw-r--r-- 1 root root   18 Aug 10  2021 .bash_logout
+-rw-r--r-- 1 root root  141 Aug 10  2021 .bash_profile
+-rw-r--r-- 1 root root  463 Feb 20  2024 .bashrc
+-rw-r--r-- 1 root root  100 Aug 10  2021 .cshrc
+drwx------ 2 root root 4096 Feb 19  2024 .ssh
+-rw-r--r-- 1 root root  129 Aug 10  2021 .tcshrc
+-rw------- 1 root root  532 Feb 19  2024 .viminfo
+drwxr-xr-x 2 root root 4096 Sep 24 16:19 Demo
+-rw------- 1 root root 4115 Feb 14  2024 anaconda-ks.cfg
+-rw-r--r-- 1 root root   95 Feb 14  2024 anaconda-post-nochroot.log
+-rw-r--r-- 1 root root  483 Feb 14  2024 anaconda-post.log
+drwxr-xr-x 2 root root 4096 Sep 24 16:19 demo
+-rw-r--r-- 1 root root    0 Sep 24 16:17 file1
+-rw-r--r-- 1 root root    0 Sep 24 16:17 file2
+-rw-r--r-- 1 root root    0 Sep 24 16:17 file3
+-rw------- 1 root root 3850 Feb 14  2024 original-ks.cfg
+
+[ root@65aa58717713 ~ ]# touch demo/new.txt -->create some files inside demo directory
+[ root@65aa58717713 ~ ]# ls -l
+total 24
+-rw------- 1 root root 4115 Feb 14  2024 anaconda-ks.cfg
+-rw-r--r-- 1 root root   95 Feb 14  2024 anaconda-post-nochroot.log
+-rw-r--r-- 1 root root  483 Feb 14  2024 anaconda-post.log
+drwxr-xr-x 2 root root 4096 Sep 25 06:11 demo
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file1
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file2
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file3
+-rw-r--r-- 1 root root    0 Sep 25 06:08 lambda.py
+-rw-r--r-- 1 root root    0 Sep 25 06:08 notes.txt
+-rw------- 1 root root 3850 Feb 14  2024 original-ks.cfg
+[ root@65aa58717713 ~ ]# cd demo
+[ root@65aa58717713 ~/demo ]# ls
+new.txt
+
+[ root@65aa58717713 ~ ]# cp notes.txt pages.txt -->copy a file we have cp command. ( copy-- source file---destination file)
+[ root@65aa58717713 ~ ]# ls -l
+total 24
+-rw------- 1 root root 4115 Feb 14  2024 anaconda-ks.cfg
+-rw-r--r-- 1 root root   95 Feb 14  2024 anaconda-post-nochroot.log
+-rw-r--r-- 1 root root  483 Feb 14  2024 anaconda-post.log
+drwxr-xr-x 2 root root 4096 Sep 25 06:11 demo
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file1
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file2
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file3
+-rw-r--r-- 1 root root    0 Sep 25 06:08 lambda.py
+-rw-r--r-- 1 root root    0 Sep 25 06:08 notes.txt
+-rw------- 1 root root 3850 Feb 14  2024 original-ks.cfg
+-rw-r--r-- 1 root root    0 Sep 25 06:19 pages.txt
+
+[ root@65aa58717713 ~ ]# mkdir DEMO
+
+[ root@65aa58717713 ~ ]# cp -r demo DEMO -->---> Same way we can copy the directory using same cp -r command
+[ root@65aa58717713 ~ ]# ls -l
+total 28
+drwxr-xr-x 3 root root 4096 Sep 25 06:23 DEMO
+-rw------- 1 root root 4115 Feb 14  2024 anaconda-ks.cfg
+-rw-r--r-- 1 root root   95 Feb 14  2024 anaconda-post-nochroot.log
+-rw-r--r-- 1 root root  483 Feb 14  2024 anaconda-post.log
+drwxr-xr-x 2 root root 4096 Sep 25 06:11 demo
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file1
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file2
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file3
+-rw-r--r-- 1 root root    0 Sep 25 06:08 lambda.py
+-rw-r--r-- 1 root root    0 Sep 25 06:08 notes.txt
+-rw------- 1 root root 3850 Feb 14  2024 original-ks.cfg
+-rw-r--r-- 1 root root    0 Sep 25 06:19 pages.txt
+
+[ root@54c16209d5b0 ~ ]# cd niche ---->"cd" COMMAND IS USED FOR THE CHANGE DIRECTORY/FOLDER
+
+[ root@54c16209d5b0 ~/niche ]# ls -la
+total 16
+drwxr-xr-x 4 root root 4096 Sep 24 16:26 .
+dr-xr-x--- 1 root root 4096 Sep 24 16:26 ..
+drwxr-xr-x 2 root root 4096 Sep 24 16:26 file4
+
+[ root@54c16209d5b0 ~ ]# rm -r niche --->remove the file or directory
+rm: descend into directory 'niche'? y
+rm: remove directory 'niche/file4'? y
+rm: remove directory 'niche/new.txt'? y
+rm: remove directory 'niche'? y
+
+[ root@54c16209d5b0 ~ ]# rm -rf demo --->remove directly, here when you enter command didn't ask the yes or no...(forcefully removed)
+[ root@54c16209d5b0 ~ ]# rm -rf Demo
+[ root@54c16209d5b0 ~ ]# pwd ---> present/current working directory/folder
+/root
+Syntax--->  mv <source-file> <destination-location>
+[ root@65aa58717713 ~ ]# mv lambda.py note.txt
+[ root@65aa58717713 ~ ]# ls -l
+total 32
+drwxr-xr-x 3 root root 4096 Sep 25 06:23 DEMO
+-rw------- 1 root root 4115 Feb 14  2024 anaconda-ks.cfg
+-rw-r--r-- 1 root root   95 Feb 14  2024 anaconda-post-nochroot.log
+-rw-r--r-- 1 root root  483 Feb 14  2024 anaconda-post.log
+drwxr-xr-x 3 root root 4096 Sep 25 06:29 demo
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file1
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file2
+-rw-r--r-- 1 root root    0 Sep 25 06:08 file3
+-rw-r--r-- 1 root root   68 Sep 25 06:34 note.txt
+-rw------- 1 root root 3850 Feb 14  2024 original-ks.cfg

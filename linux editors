@@ -1,0 +1,78 @@
+In a file insertion of data need commands so below are the commands
+
+VI EDITOR--
+
+vi filename -> Press Insert or i -> Make Changes -> Press ESC -> Press Colon : -> Press wq -> Done
+{vi filename -> Press Insert or i -> Make Changes -> Press ESC -> Press Colon : -> Press q! -> Done
+ ---this is without changes. ex: unfortunately open file and did changes that usefull}
+
+ CONTENT FILTERS--
+
+ >>>>>>>"cat" command--->
+
+Syntax: cat filename
+(1). using this command---It shows the content of the file
+(2). cat>file name--------we can creat file and insert the content as well at a time.
+(3). cat -n filename------It shows the content of the file along with the line numbers
+
+example below:
+root $ cat -n a2
+     1
+     2  hello good morning 
+     3  today i ma practicing linux basic commnads
+     4  like how to create file
+     5  how to create folder
+     6  how copy the file
+     7  how to copy the folder
+     8  how to remove file
+     9  how to remove folder
+    10  how to change directory
+root $
+>>>>>>>> head command --->
+Syntax: head filename
+head -n 5 file----->It gives the first 5 lines of the file
+head -n 3 file----->It gives the first 3 lines of the file (from starting to upto how many lined need to this number you can enter)
+
+>>>>>>> tail command ---->
+Syntax: tail filename
+tail -n 5 file---->It gives the last 5 lines of the file
+tail -n 2 file---->It gives the last 2 lines of the file  (from bottom to upto how many lined need to this number you can enter)
+
+>>>>>>> awk command ---> some cases the content needs to be filtered based on the columns in that case we use awk command.
+Syntax: awk -F 'delimiter' '{print $column-number}' <filename>
+example:  awk -F : '{print $1,$2}' file (here ":" in this colon place we can give , or . or ' or any delimiter)-It will print the first and second column of the file
+
+>>>>>>> grep command --->(grep stands for globally search for regular expression and print out).
+---filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern. The pattern that is searched in the file is referred to as the regular expression---
+Syntax: grep <word> <filename>
+example: grep the a1
+[ root@b3fbed4f6af8 ~ ]# cat a1
+hello raghu...iam practing the linux commands, so craghu can you help me more the codes and the use of the commands
+[ root@b3fbed4f6af8 ~ ]# grep the a1
+hello raghu...iam practing <the> linux commands, so craghu can you help me more <the> codes and <the> use of the commands (here the word is highlite but i am only change here "<>" like these)
+[ root@b3fbed4f6af8 ~ ]#
+
+
+PROCESS MANAGEMENT:
+
+>>>>>> ps command ---process can be fetched from the command line
+>>>>>> ps -u command -If you need all the process which belongs to the current user 
+
+>>>>>> kill and kill -9
+we want to kill this process, So we would use kill command along with the PID.
+we might need to kill such process using an force option -9 
+
+PACKAGE MANAGEMENT:
+
+>>>>> sudo dnf install/remove/update/remove  package
+dnf-is used for package management in linux OS 
+
+>>>>> sudo systemctl subcommand (start or stop or restart) service name(nginx)
+used to manage system services. It's part of the systemd system and service manage.
+
+USER MANAGEMENT:
+
+>>>>> useradd username
+create a directory for new user in /home
+>>>>  id username
+to To check whether the user has been created or not

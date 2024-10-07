@@ -1,0 +1,1 @@
+user-->load balancer-->web server(front end)-->application server(backend)--->DataBase server
