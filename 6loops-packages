@@ -4,5 +4,7 @@ root(){
      then
          echo "you have run in root user"
          exit 1
+         else
+         echo "proceed further"
   fi
 } 
