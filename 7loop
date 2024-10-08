@@ -1,7 +1,8 @@
 #!/bin/bash
 R="\e[31m"
 G="\e[32m"
-N="\e[0"
+N="\e[0m"
+Y="\e[30m"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -22,6 +23,6 @@ do
         dnf install $package -y
         VALIDATE $? "Installing $package"
     else
-        echo "$package is already installed..nothing to do"
+        echo "$package is already installed..so nothing to do"
     fi
 done
