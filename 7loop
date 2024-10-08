@@ -14,7 +14,7 @@ if [ $userid -ne 0 ]
        echo -e "$G your are in root user....... $N"
 fi
 
-for package $@
+for package in $@
   do
     dnf install $package
     if [ $userid -ne 0 ]
