@@ -8,3 +8,7 @@ do
       echo $i
    fi
 done
+  
+
+x:chinchan
+grep -o "c" <<<"cx" | wc -l  
