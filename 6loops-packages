@@ -1,14 +1,25 @@
 #!/bin/bash
-root(){
-     if [ $userid -ne 0 ]
+#root(){
+ #    if [ $userid -ne 0 ]
+#   then
+ #        echo "you have run in root user"
+  #       else
+   #      echo "proceed further"
+  #fi
+#} 
 
-     then
-         echo "you have run in root user"
-         
-         else
-         echo "proceed further"
-  fi
-} 
+#root
+#dnf install ngnix -y
 
-root
+
+
+CHECK_ROOT(){
+    if [ $USERID -ne 0 ]
+    then
+        echo "Please run this script with root priveleges"
+        exit 1
+    fi
+}
+
+CHECK_ROOT
 dnf install ngnix -y
