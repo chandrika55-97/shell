@@ -11,7 +11,7 @@ if [ $userid -ne 0 ]
        echo -e "$R your not in root user $N"
        exit 1
     else
-       echo -e "$G your are in root user....... $N"
+       echo -e "$Y your are in root user....... $N"
 fi
 
 for package in $@
@@ -22,7 +22,7 @@ for package in $@
           echo -e "$R not installed $package........... $N"
           exit1
         else
-           echo -e "$R $package installed completed........ $N"
+           echo -e "$G $package installed completed........ $N"
     fi
 done    
 
