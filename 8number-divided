@@ -10,5 +10,6 @@ do
 done
   
 
-x:chinchan
-grep -o "c" <<<"cx" | wc -l  
+x:$chinchan
+grep -o "c" <<<"c$x" | wc -l  
+echo $x
