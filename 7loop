@@ -4,25 +4,27 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[30m"
 
-VALIDATE(){
-    if [ $1 -ne 0 ]
-    then
-        echo -e "$2 is...$R FAILED $N"
-        exit 1
-    else
-        echo -e "$2 is... $G SUCCESS $N"
-    fi
-}
+userid=$(id -u)
 
-for package in $@ # $@ refers to all arguments passed to it
-do
-    dnf list installed $package
-    if [ $? -ne 0 ]
-    then
-        echo "$package is not installed, going to install it.."
-        dnf install $package -y
-        VALIDATE $? "Installing $package"
+if [ $userid -ne 0 ]
+   then
+       echo -e "$R your not in root user $N"
+       exit 1
     else
-        echo "$package is already installed..so nothing to do"
+       echo -e "$G your are in root user....... $N"
+fi
+
+for package $@
+  do
+    dnf install $package
+    if [ $userid -ne 0 ]
+      then
+          echo -e "$R not installed $package........... $N"
+          exit1
+        else
+           echo -e "$R $package installed completed........ $N"
     fi
-done
+done    
+
+      
+
