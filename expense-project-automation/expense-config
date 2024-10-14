@@ -1,6 +1,6 @@
 proxy_http_version 1.1;
 
-location /api/ { proxy_pass http://backend.daws81s.online:8080/; }  #here backend ip address or domain of backend name
+location /api/ { proxy_pass 172.31.44.63; }  #here backend ip address or domain of backend name
 
 location /health {
   stub_status on;
