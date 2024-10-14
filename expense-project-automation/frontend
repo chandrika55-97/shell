@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 LOGS_FOLDER="/var/log/expense"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
